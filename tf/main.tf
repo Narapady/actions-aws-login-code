@@ -15,7 +15,7 @@ resource "aws_instance" "ec2_instance" {
   export AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query "Account" --output text)
   export REGION=us-east-1
   export BACKEND_CONTAINER=flask_api
-  export REPOSITORY_NAME=flask_app_sample
+  export REPOSITORY_NAME=flask_app
   sudo yum update -y
   sudo yum install docker -y
   sudo systemctl start docker
