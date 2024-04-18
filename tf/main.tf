@@ -56,6 +56,7 @@ resource "aws_iam_role" "ec2_ecr_role" {
 
 # create instance profile, as a container for the iam role
 resource "aws_iam_instance_profile" "ec2_profile" {
+  name = "ec2-ecr-profile"
   role = aws_iam_role.ec2_ecr_role.name
 }
 
