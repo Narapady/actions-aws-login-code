@@ -8,7 +8,7 @@ resource "aws_instance" "ec2_instance" {
   ami                  = "ami-04e5276ebb8451442"
   instance_type        = "t2.micro"
   iam_instance_profile = aws_iam_instance_profile.ec2_profile.name
-  key_name             = "example" # update this
+  key_name             = "terraform-aws" # update this
   user_data            = <<-EOF
   #!/bin/bash
   echo "Deployed at: ${local.timestamp}"
